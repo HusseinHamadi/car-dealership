@@ -27,10 +27,5 @@ public class UsedCar extends SaleCar{
 
     private Long mileage;
 
-    @CreatedDate
-    @Column(nullable = false, updatable = false)
-    private LocalDateTime createdAt;
 
-    @LastModifiedDate
-    private LocalDateTime updatedAt;
 }

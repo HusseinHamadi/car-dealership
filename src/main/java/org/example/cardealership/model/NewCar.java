@@ -23,10 +23,5 @@ import java.time.LocalDateTime;
 public class NewCar extends SaleCar{
     private int warranty;
 
-    @CreatedDate
-    @Column(nullable = false, updatable = false)
-    private LocalDateTime createdAt;
 
-    @LastModifiedDate
-    private LocalDateTime updatedAt;
 }
