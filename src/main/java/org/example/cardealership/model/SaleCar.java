@@ -24,7 +24,6 @@ import java.time.LocalDateTime;
 public class SaleCar extends Car{
 
     private BigDecimal basePrice;
-
     @CreatedDate
     @Column(nullable = false, updatable = false)
     private LocalDateTime createdAt;
