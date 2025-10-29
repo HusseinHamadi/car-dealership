@@ -1,6 +1,8 @@
 package org.example.cardealership.controller;
 
 
+import org.example.cardealership.dto.CustomerCreateDTO;
+import org.example.cardealership.dto.CustomerResponseDTO;
 import org.example.cardealership.model.Customer;
 import org.example.cardealership.service.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,9 +28,9 @@ public class CustomerController {
     }
 
     @GetMapping
-    public ResponseEntity<List<Customer>> getAllCustomers(){
+    public ResponseEntity<List<CustomerResponseDTO>> getAllCustomers(){
         logger.info("Getting all customers: Controller");
-        List<Customer> customerList = customerService.getAllCustomers();
+        List<CustomerResponseDTO> customerList = customerService.getAllCustomers();
         return ResponseEntity
                 .status(HttpStatus.OK)
                 .header("List", "Customers")
@@ -36,16 +38,16 @@ public class CustomerController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Customer> getCustomerById(@PathVariable Long id){
-        Customer customer=customerService.getCustomerById(id);
+    public ResponseEntity<CustomerResponseDTO> getCustomerById(@PathVariable Long id){
+        CustomerResponseDTO customer=customerService.getCustomerById(id);
         return ResponseEntity
                 .status(HttpStatus.OK)
                 .body(customer);
     }
 
     @PostMapping
-    public ResponseEntity<Customer> addCustomer(@RequestBody Customer customer){
-        Customer savedCustomer = customerService.addCustomer(customer);
+    public ResponseEntity<CustomerResponseDTO> addCustomer(@RequestBody CustomerCreateDTO customer){
+        CustomerResponseDTO savedCustomer = customerService.addCustomer(customer);
         return ResponseEntity
                 .status(HttpStatus.OK)
                 .body(savedCustomer);
@@ -53,8 +55,8 @@ public class CustomerController {
 
 
     @PostMapping("/{id}")
-    public ResponseEntity<Customer> updateCustomer(@RequestBody Customer customer, @PathVariable Long id){
-        Customer updatedCustomer = customerService.updateCustomer(customer, id);
+    public ResponseEntity<CustomerResponseDTO> updateCustomer(@RequestBody CustomerCreateDTO customer, @PathVariable Long id){
+        CustomerResponseDTO updatedCustomer = customerService.updateCustomer(customer, id);
         return ResponseEntity
                 .status(HttpStatus.OK)
                 .body(updatedCustomer);

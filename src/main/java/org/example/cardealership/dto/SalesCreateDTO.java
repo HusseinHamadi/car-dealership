@@ -7,11 +7,7 @@ import org.example.cardealership.enums.Status;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
-public record SalesCreateDTO(@NotBlank String brand,
-                             @NotBlank String model,
-                             @NotNull int year,
-                             @NotNull Status status,
-                             @NotNull BigDecimal finalPrice,
+public record SalesCreateDTO(@NotNull BigDecimal finalPrice,
                              @NotNull Long userId,
                              @NotNull Long customerId,
                              @NotNull Long saleCarId

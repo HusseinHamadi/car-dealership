@@ -28,6 +28,7 @@ public class User {
 
     private String phoneNumber;
     private String email;
+    private String username;
     private String password;
 
     @Enumerated(value = EnumType.STRING)

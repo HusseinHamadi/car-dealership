@@ -4,7 +4,8 @@ import org.example.cardealership.enums.Status;
 
 import java.math.BigDecimal;
 
-public record RentalCarResponseDTO(String brand,
+public record RentalCarResponseDTO(Long id,
+                                   String brand,
                                    String model,
                                    int year,
                                    Status status,

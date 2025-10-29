@@ -4,7 +4,8 @@ import org.example.cardealership.enums.Status;
 
 import java.time.LocalDateTime;
 
-public record NewCarResponseDTO(String brand,
+public record NewCarResponseDTO(Long id,
+                                String brand,
                                 String model,
                                 int year,
                                 Status status,

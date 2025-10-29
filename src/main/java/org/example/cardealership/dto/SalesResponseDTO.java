@@ -9,11 +9,12 @@ import org.example.cardealership.model.User;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
-public record SalesResponseDTO( String brand,
-                                String model,
-                                int year,
-                                Status status,
+public record SalesResponseDTO( Long id,
                                 BigDecimal finalPrice,
+                                String brand,
+                                String model,
+                                Integer warrantyYears, // null if used
+                                Integer mileage, // null if new
                                 UserResponseDTO user,
                                 CustomerResponseDTO customer
 ) {

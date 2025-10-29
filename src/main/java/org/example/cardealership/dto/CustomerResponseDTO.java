@@ -6,7 +6,8 @@ import jakarta.validation.constraints.NotBlank;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 
-public record CustomerResponseDTO(String firstName,
+public record CustomerResponseDTO(Long id,
+                                  String firstName,
                                   String lastName,
                                   String phoneNumber,
                                   String email,

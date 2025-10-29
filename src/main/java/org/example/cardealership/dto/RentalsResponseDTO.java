@@ -7,17 +7,16 @@ import org.example.cardealership.model.RentalCar;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
-public record RentalsResponseDTO(String brand,
+public record RentalsResponseDTO(Long id,
+                                 UserResponseDTO user,
+                                 CustomerResponseDTO customer,
+                                 String brand,
                                  String model,
                                  int year,
                                  Status status,
                                  BigDecimal dailyRate,
                                  LocalDateTime rentStart,
                                  LocalDateTime rentEnd,
-                                 BigDecimal totalPrice,
-                                 UserResponseDTO user,
-                                 CustomerResponseDTO customer
-
-
+                                 BigDecimal totalPrice
 ) {
 }

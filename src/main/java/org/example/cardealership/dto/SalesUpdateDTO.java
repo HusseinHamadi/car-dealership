@@ -6,10 +6,7 @@ import jakarta.validation.constraints.NotNull;
 import java.math.BigDecimal;
 
 public record SalesUpdateDTO(
-                              BigDecimal finalPrice,
-                              Long userId,
-                              Long customerId,
-                              Long saleCarId
+                              BigDecimal finalPrice
 
 
 ) {
