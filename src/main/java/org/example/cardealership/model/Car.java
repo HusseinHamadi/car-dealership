@@ -23,23 +23,23 @@ public class Car {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    protected Long id;
+    private Long id;
 
-    protected String brand;
-    protected String model;
-    protected int year;
+    private String brand;
+    private String model;
+    private int year;
 
     @Enumerated(value = EnumType.STRING)
-    protected Status status;
+    private Status status;
 
 
 
     @CreatedDate
     @Column(nullable = false, updatable = false)
-    protected LocalDateTime createdAt;
+    private LocalDateTime createdAt;
 
     @LastModifiedDate
-    protected LocalDateTime updatedAt;
+    private LocalDateTime updatedAt;
 
 
 }

@@ -18,25 +18,25 @@ import java.time.LocalDateTime;
 public class Sales {
 
     @Id
-    protected Long id;
+    private Long id;
 
-    protected LocalDateTime saleDate;
-    protected BigDecimal finalPrice;
+    private LocalDateTime saleDate;
+    private BigDecimal finalPrice;
 
     @CreatedDate
     @Column(nullable = false, updatable = false)
-    protected LocalDateTime createdAt;
+    private LocalDateTime createdAt;
 
     @LastModifiedDate
-    protected LocalDateTime updatedAt;
+    private LocalDateTime updatedAt;
 
     @ManyToOne(cascade = CascadeType.PERSIST)
-    protected User user;
+    private User user;
 
     @ManyToOne(cascade = CascadeType.PERSIST)
-    protected Customer customer;
+    private Customer customer;
 
     @ManyToOne(cascade = CascadeType.PERSIST)
-    protected SaleCar saleCar;
+    private SaleCar saleCar;
 
 }
