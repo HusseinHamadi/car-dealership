@@ -3,6 +3,8 @@ package org.example.cardealership.controller;
 
 import org.example.cardealership.dto.CustomerCreateDTO;
 import org.example.cardealership.dto.CustomerResponseDTO;
+import org.example.cardealership.dto.CustomerUpdateDTO;
+import org.example.cardealership.mapper.CustomerMapper;
 import org.example.cardealership.model.Customer;
 import org.example.cardealership.service.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -55,11 +57,20 @@ public class CustomerController {
 
 
     @PostMapping("/{id}")
-    public ResponseEntity<CustomerResponseDTO> updateCustomer(@RequestBody CustomerCreateDTO customer, @PathVariable Long id){
+    public ResponseEntity<CustomerResponseDTO> updateCustomer(@RequestBody CustomerUpdateDTO customer, @PathVariable Long id){
         CustomerResponseDTO updatedCustomer = customerService.updateCustomer(customer, id);
         return ResponseEntity
                 .status(HttpStatus.OK)
                 .body(updatedCustomer);
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<String> deleteCustomer(@PathVariable Long id){
+        String message=customerService.deleteCustomer(id);
+
+        return ResponseEntity
+                .status(HttpStatus.OK)
+                .body(message);
     }
 
 }

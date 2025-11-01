@@ -1,16 +1,19 @@
 package org.example.cardealership.service;
 
-import org.example.cardealership.model.Customer;
+import org.example.cardealership.dto.CustomerCreateDTO;
+import org.example.cardealership.dto.CustomerResponseDTO;
+import org.example.cardealership.dto.CustomerUpdateDTO;
 
 import java.util.List;
-import java.util.Optional;
 
 public interface CustomerService {
-    List<Customer> getAllCustomers();
+    List<CustomerResponseDTO> getAllCustomers();
 
-    Customer getCustomerById(Long id);
+    CustomerResponseDTO getCustomerById(Long id);
 
-    Customer addCustomer(Customer customer);
+    CustomerResponseDTO addCustomer(CustomerCreateDTO customer);
 
-    Customer updateCustomer(Customer customer, Long id);
+    CustomerResponseDTO updateCustomer(CustomerUpdateDTO customer, Long id);
+
+    String deleteCustomer(Long id);
 }

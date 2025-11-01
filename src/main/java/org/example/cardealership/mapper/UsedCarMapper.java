@@ -6,7 +6,7 @@ import org.example.cardealership.dto.UsedCarUpdateDTO;
 import org.example.cardealership.model.UsedCar;
 import org.mapstruct.Mapper;
 
-@Mapper
+@Mapper(componentModel = "spring")
 public interface UsedCarMapper {
 
     UsedCar usedCarCreateDtoToUsedCar(UsedCarCreateDTO usedCarCreateDTO);
