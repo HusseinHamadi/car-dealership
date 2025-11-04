@@ -1,10 +1,9 @@
 package org.example.cardealership.dto;
 
-import jakarta.validation.constraints.Min;
-import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.NotNull;
-import jakarta.validation.constraints.Positive;
+import jakarta.validation.constraints.*;
 import org.example.cardealership.enums.Status;
+
+import java.math.BigDecimal;
 
 public record NewCarCreateDTO(
         @NotBlank(message = "Car brand is required.")
@@ -19,6 +18,10 @@ public record NewCarCreateDTO(
 
         @NotNull(message = "Car status is required.")
         Status status,
+
+        @NotNull(message = "Base price is required.")
+        @PositiveOrZero(message = "Base price must be zero or positive.")
+        BigDecimal basePrice,
 
         @Positive(message = "Warranty period must be positive if specified.")
         Integer warranty

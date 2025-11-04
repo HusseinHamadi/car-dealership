@@ -6,6 +6,8 @@ import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.PositiveOrZero;
 import org.example.cardealership.enums.Status;
 
+import java.math.BigDecimal;
+
 public record UsedCarCreateDTO(
         @NotBlank(message = "Car brand is required.")
         String brand,
@@ -19,6 +21,10 @@ public record UsedCarCreateDTO(
 
         @NotNull(message = "Car status is required.")
         Status status,
+
+        @NotNull(message = "Base price is required.")
+        @PositiveOrZero(message = "Base price must be zero or positive.")
+        BigDecimal basePrice,
 
         @PositiveOrZero(message = "Mileage must be zero or positive.")
         Long mileage
