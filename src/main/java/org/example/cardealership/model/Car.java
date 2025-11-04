@@ -1,7 +1,10 @@
 package org.example.cardealership.model;
 
 import jakarta.persistence.*;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 import lombok.experimental.SuperBuilder;
 import org.example.cardealership.enums.Status;
 import org.springframework.data.annotation.CreatedDate;
@@ -27,7 +30,7 @@ public class Car {
 
     private String brand;
     private String model;
-    private int year;
+    private Integer year;
 
     @Enumerated(value = EnumType.STRING)
     private Status status;

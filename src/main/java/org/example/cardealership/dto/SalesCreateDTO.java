@@ -1,17 +1,22 @@
 package org.example.cardealership.dto;
 
-import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.DecimalMin;
 import jakarta.validation.constraints.NotNull;
-import org.example.cardealership.enums.Status;
 
 import java.math.BigDecimal;
-import java.time.LocalDateTime;
 
-public record SalesCreateDTO(@NotNull BigDecimal finalPrice,
-                             @NotNull Long userId,
-                             @NotNull Long customerId,
-                             @NotNull Long saleCarId
+public record SalesCreateDTO(
+        @NotNull(message = "Final price is required.")
+        @DecimalMin(value = "0.0", inclusive = false, message = "Final price must be greater than zero.")
+        BigDecimal finalPrice,
 
+        @NotNull(message = "User ID is required.")
+        Long userId,
 
-) {
-}
+        @NotNull(message = "Customer ID is required.")
+        Long customerId,
+
+        @NotNull(message = "Sale car ID is required.")
+        Long saleCarId
+) { }
+

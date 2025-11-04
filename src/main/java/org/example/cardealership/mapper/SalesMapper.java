@@ -8,8 +8,6 @@ import org.example.cardealership.model.NewCar;
 import org.example.cardealership.model.Sales;
 import org.example.cardealership.model.UsedCar;
 import org.mapstruct.Mapper;
-import org.mapstruct.Mapping;
-import org.mapstruct.Mappings;
 
 import java.math.BigDecimal;
 

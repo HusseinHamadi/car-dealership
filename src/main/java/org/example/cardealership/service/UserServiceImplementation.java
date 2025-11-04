@@ -4,6 +4,7 @@ package org.example.cardealership.service;
 import org.example.cardealership.dto.UserCreateDTO;
 import org.example.cardealership.dto.UserResponseDTO;
 import org.example.cardealership.dto.UserUpdateDTO;
+import org.example.cardealership.exception.ConflictException;
 import org.example.cardealership.exception.NotFoundException;
 import org.example.cardealership.helpers.StringFunctions;
 import org.example.cardealership.mapper.UserMapper;
@@ -44,6 +45,13 @@ public class UserServiceImplementation implements UserService{
 
     @Override
     public UserResponseDTO addUser(UserCreateDTO user) {
+        if(userRepository.findByUsername(user.username()).isPresent()){
+            throw new ConflictException("Username already exists.");
+        }
+        if(userRepository.findByEmail(user.email()).isPresent()){
+            throw new ConflictException("Email already exists.");
+        }
+
         User newUser = userMapper.userCreateDtoToUser(user);
         return userMapper.userToUserResponseDto(userRepository.save(newUser));
     }

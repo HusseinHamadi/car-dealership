@@ -1,19 +1,28 @@
 package org.example.cardealership.dto;
 
-import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.DecimalMin;
 import jakarta.validation.constraints.NotNull;
-import org.example.cardealership.enums.Status;
-import org.springframework.cglib.core.Local;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
-public record RentalsCreateDTO(@NotNull LocalDateTime rentStart,
-                               @NotBlank LocalDateTime rentEnd,
-                               @NotBlank BigDecimal totalPrice,
-                               @NotNull Long userId,
-                               @NotNull Long customerId,
-                               @NotNull Long saleCarId
+public record RentalsCreateDTO(
+        @NotNull(message = "Rent start date and time is required.")
+        LocalDateTime rentStart,
 
-) {
-}
+        @NotNull(message = "Rent end date and time is required.")
+        LocalDateTime rentEnd,
+
+        @NotNull(message = "Total price is required.")
+        @DecimalMin(value = "0.0", inclusive = false, message = "Total price must be greater than zero.")
+        BigDecimal totalPrice,
+
+        @NotNull(message = "User ID is required.")
+        Long userId,
+
+        @NotNull(message = "Customer ID is required.")
+        Long customerId,
+
+        @NotNull(message = "Sale car ID is required.")
+        Long saleCarId
+) { }

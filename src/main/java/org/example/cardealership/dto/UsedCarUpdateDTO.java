@@ -4,7 +4,7 @@ import org.example.cardealership.enums.Status;
 
 public record UsedCarUpdateDTO(String brand,
                                String model,
-                               int year,
+                               Integer year,
                                Status status,
                                Long mileage
 

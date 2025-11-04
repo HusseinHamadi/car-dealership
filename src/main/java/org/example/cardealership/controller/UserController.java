@@ -1,6 +1,7 @@
 package org.example.cardealership.controller;
 
 
+import jakarta.validation.Valid;
 import org.example.cardealership.dto.UserCreateDTO;
 import org.example.cardealership.dto.UserResponseDTO;
 import org.example.cardealership.dto.UserUpdateDTO;
@@ -37,7 +38,7 @@ public class UserController {
     }
 
     @PostMapping
-    public ResponseEntity<UserResponseDTO> addUser(@RequestBody UserCreateDTO user){
+    public ResponseEntity<UserResponseDTO> addUser(@Valid @RequestBody UserCreateDTO user){
         UserResponseDTO createdUser = userService.addUser(user);
         return ResponseEntity
                 .status(HttpStatus.OK)

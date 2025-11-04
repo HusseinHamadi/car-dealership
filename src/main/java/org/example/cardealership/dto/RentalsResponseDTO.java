@@ -1,8 +1,6 @@
 package org.example.cardealership.dto;
 
 import org.example.cardealership.enums.Status;
-import org.example.cardealership.model.Car;
-import org.example.cardealership.model.RentalCar;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
@@ -12,7 +10,7 @@ public record RentalsResponseDTO(Long id,
                                  CustomerResponseDTO customer,
                                  String brand,
                                  String model,
-                                 int year,
+                                 Integer year,
                                  Status status,
                                  BigDecimal dailyRate,
                                  LocalDateTime rentStart,

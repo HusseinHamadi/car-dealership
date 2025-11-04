@@ -1,6 +1,7 @@
 package org.example.cardealership.controller;
 
 
+import jakarta.validation.Valid;
 import org.example.cardealership.dto.CustomerCreateDTO;
 import org.example.cardealership.dto.CustomerResponseDTO;
 import org.example.cardealership.dto.CustomerUpdateDTO;
@@ -44,7 +45,7 @@ public class CustomerController {
     }
 
     @PostMapping
-    public ResponseEntity<CustomerResponseDTO> addCustomer(@RequestBody CustomerCreateDTO customer) {
+    public ResponseEntity<CustomerResponseDTO> addCustomer(@Valid @RequestBody CustomerCreateDTO customer) {
         CustomerResponseDTO savedCustomer = customerService.addCustomer(customer);
         return ResponseEntity
                 .status(HttpStatus.OK)

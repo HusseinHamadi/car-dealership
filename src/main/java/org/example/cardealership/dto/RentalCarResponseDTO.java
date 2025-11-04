@@ -7,7 +7,7 @@ import java.math.BigDecimal;
 public record RentalCarResponseDTO(Long id,
                                    String brand,
                                    String model,
-                                   int year,
+                                   Integer year,
                                    Status status,
                                    BigDecimal dailyRate
 

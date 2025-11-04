@@ -5,8 +5,6 @@ import org.example.cardealership.dto.RentalsResponseDTO;
 import org.example.cardealership.dto.RentalsUpdateDTO;
 import org.example.cardealership.model.Rentals;
 import org.mapstruct.Mapper;
-import org.mapstruct.Mapping;
-import org.mapstruct.Mappings;
 
 @Mapper(componentModel = "spring", uses = {CustomerMapper.class, UserMapper.class, RentalCarMapper.class})
 public interface RentalsMapper {
