@@ -23,4 +23,5 @@ public record RentalsCreateDTO(
 
         @NotNull(message = "Rental car ID is required.")
         Long rentalCarId
-) { }
+) {
+}

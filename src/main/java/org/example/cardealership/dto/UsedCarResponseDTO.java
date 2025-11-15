@@ -10,7 +10,8 @@ public record UsedCarResponseDTO(Long id,
                                  Integer year,
                                  Status status,
                                  BigDecimal basePrice,
-                                 Long mileage
+                                 Long mileage,
+                                 BigDecimal finalPrice
 
-) {
+) implements SaleCarResponseDTO {
 }

@@ -19,7 +19,7 @@ import lombok.experimental.SuperBuilder;
 @SuperBuilder
 @PrimaryKeyJoinColumn(name = "sale_car_id")
 @Table(name = "new_cars")
-public class NewCar extends SaleCar{
+public class NewCar extends SaleCar {
 
     @Column(name = "warranty_years")
     private Integer warranty;

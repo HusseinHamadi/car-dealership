@@ -10,7 +10,8 @@ public record NewCarResponseDTO(Long id,
                                 Integer year,
                                 Status status,
                                 BigDecimal basePrice,
-                                Integer warranty
+                                Integer warranty,
+                                BigDecimal finalPrice
 
-) {
+) implements SaleCarResponseDTO {
 }

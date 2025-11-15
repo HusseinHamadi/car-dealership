@@ -17,11 +17,11 @@ import java.util.List;
 public class ExceptionControllerAdvice {
 
 
-
     //webRequest is to get data about the current http request, we need it to get the url
     @ExceptionHandler(NotFoundException.class)
-    public ResponseEntity<ErrorResponse> exceptionNotFoundHandler(NotFoundException ex, WebRequest request){
-        ErrorResponse errorResponse = new ErrorResponse(LocalDateTime.now(),
+    public ResponseEntity<ErrorResponse> exceptionNotFoundHandler(NotFoundException ex, WebRequest request) {
+        ErrorResponse errorResponse = new ErrorResponse(
+                LocalDateTime.now(),
                 HttpStatus.BAD_REQUEST.value(),
                 "Bad Request",
                 ex.getMessage(),
@@ -31,7 +31,7 @@ public class ExceptionControllerAdvice {
     }
 
     @ExceptionHandler(ConflictException.class)
-    public ResponseEntity<ErrorResponse> exceptionConflictHandler(ConflictException ex, WebRequest request){
+    public ResponseEntity<ErrorResponse> exceptionConflictHandler(ConflictException ex, WebRequest request) {
         ErrorResponse errorResponse = new ErrorResponse(
                 LocalDateTime.now(),
                 HttpStatus.CONFLICT.value(),
@@ -43,12 +43,12 @@ public class ExceptionControllerAdvice {
     }
 
     @ExceptionHandler(MethodArgumentNotValidException.class)
-    public ResponseEntity<ErrorResponse> exceptionMethodArgumentsNotValidHandler(MethodArgumentNotValidException ex, WebRequest request){
+    public ResponseEntity<ErrorResponse> exceptionMethodArgumentsNotValidHandler(MethodArgumentNotValidException ex, WebRequest request) {
 
         List<String> errors = ex.getBindingResult()
                 .getFieldErrors()
                 .stream()
-                .map(error -> error.getField()+": "+error.getDefaultMessage())
+                .map(error -> error.getField() + ": " + error.getDefaultMessage())
                 .toList();
 
         ErrorResponse errorResponse = new ErrorResponse(

@@ -19,9 +19,9 @@ import lombok.experimental.SuperBuilder;
 @NoArgsConstructor
 @AllArgsConstructor
 @SuperBuilder
-@PrimaryKeyJoinColumn(name="sale_car_id")
+@PrimaryKeyJoinColumn(name = "sale_car_id")
 @Table(name = "used_cars")
-public class UsedCar extends SaleCar{
+public class UsedCar extends SaleCar {
 
     private Long mileage;
 

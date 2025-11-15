@@ -17,14 +17,14 @@ import java.util.Objects;
 import java.util.Optional;
 
 @Service
-public class UserServiceImplementation implements UserService{
+public class UserServiceImplementation implements UserService {
 
     UserRepository userRepository;
     UserMapper userMapper;
 
-    public UserServiceImplementation(UserRepository userRepository, UserMapper userMapper){
-        this.userRepository= userRepository;
-        this.userMapper= userMapper;
+    public UserServiceImplementation(UserRepository userRepository, UserMapper userMapper) {
+        this.userRepository = userRepository;
+        this.userMapper = userMapper;
     }
 
     @Override
@@ -39,16 +39,16 @@ public class UserServiceImplementation implements UserService{
     @Override
     public UserResponseDTO getUserById(Long id) {
         Optional<User> user = userRepository.findById(id);
-        return user.map(u->userMapper.userToUserResponseDto(u))
-                .orElseThrow(()->new NotFoundException("User with Id: "+id+" is not found"));
+        return user.map(u -> userMapper.userToUserResponseDto(u))
+                .orElseThrow(() -> new NotFoundException("User with Id: " + id + " is not found"));
     }
 
     @Override
     public UserResponseDTO addUser(UserCreateDTO user) {
-        if(userRepository.findByUsername(user.username()).isPresent()){
+        if (userRepository.findByUsername(user.username()).isPresent()) {
             throw new ConflictException("Username already exists.");
         }
-        if(userRepository.findByEmail(user.email()).isPresent()){
+        if (userRepository.findByEmail(user.email()).isPresent()) {
             throw new ConflictException("Email already exists.");
         }
 
@@ -59,29 +59,29 @@ public class UserServiceImplementation implements UserService{
     @Override
     public UserResponseDTO updateUser(UserUpdateDTO userDTO, Long id) {
         Optional<User> foundUser = userRepository.findById(id);
-        if(foundUser.isEmpty()){
-            throw new NotFoundException("User with Id: "+id+" is not found");
+        if (foundUser.isEmpty()) {
+            throw new NotFoundException("User with Id: " + id + " is not found");
         }
         User updateUser = foundUser.get();
-        if(StringFunctions.notNullAndNotEmpty(userDTO.firstName())){
+        if (StringFunctions.notNullAndNotEmpty(userDTO.firstName())) {
             updateUser.setFirstName(userDTO.firstName());
         }
-        if(StringFunctions.notNullAndNotEmpty(userDTO.lastName())){
+        if (StringFunctions.notNullAndNotEmpty(userDTO.lastName())) {
             updateUser.setLastName(userDTO.lastName());
         }
-        if(StringFunctions.notNullAndNotEmpty(userDTO.phoneNumber())){
+        if (StringFunctions.notNullAndNotEmpty(userDTO.phoneNumber())) {
             updateUser.setPhoneNumber(userDTO.phoneNumber());
         }
-        if(StringFunctions.notNullAndNotEmpty(userDTO.email())){
+        if (StringFunctions.notNullAndNotEmpty(userDTO.email())) {
             updateUser.setEmail(userDTO.email());
         }
-        if(StringFunctions.notNullAndNotEmpty(userDTO.username())){
+        if (StringFunctions.notNullAndNotEmpty(userDTO.username())) {
             updateUser.setUsername(userDTO.username());
         }
-        if(StringFunctions.notNullAndNotEmpty(userDTO.password())){
+        if (StringFunctions.notNullAndNotEmpty(userDTO.password())) {
             updateUser.setPassword(userDTO.password());
         }
-        if(Objects.nonNull(userDTO.role())){
+        if (Objects.nonNull(userDTO.role())) {
             updateUser.setRole(userDTO.role());
         }
 
@@ -92,10 +92,10 @@ public class UserServiceImplementation implements UserService{
     @Override
     public String deleteUser(Long id) {
         Optional<User> user = userRepository.findById(id);
-        if(user.isEmpty()){
-            throw new NotFoundException("User with Id: "+id+" is not found");
+        if (user.isEmpty()) {
+            throw new NotFoundException("User with Id: " + id + " is not found");
         }
         userRepository.delete(user.get());
-        return "User with Id:"+id+" is deleted successfully";
+        return "User with Id:" + id + " is deleted successfully";
     }
 }

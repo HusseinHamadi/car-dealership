@@ -63,7 +63,7 @@ public class RentalsServiceImplementation implements RentalsService {
     @Override
     public RentalsResponseDTO addRentals(RentalsCreateDTO rentalsDTO) {
 
-        User user  = userRepository.findById(rentalsDTO.userId()).orElseThrow(() -> new NotFoundException("User with Id: " + rentalsDTO.userId() + " is not found."));
+        User user = userRepository.findById(rentalsDTO.userId()).orElseThrow(() -> new NotFoundException("User with Id: " + rentalsDTO.userId() + " is not found."));
         Customer customer = customerRepository.findById(rentalsDTO.customerId()).orElseThrow(() -> new NotFoundException("Customer with Id: " + rentalsDTO.customerId() + " is not found."));
         RentalCar rentalCar = rentalCarRepository.findById(rentalsDTO.rentalCarId()).orElseThrow(() -> new NotFoundException("Rental car with Id: " + rentalsDTO.rentalCarId() + " is not found."));
 
@@ -89,10 +89,10 @@ public class RentalsServiceImplementation implements RentalsService {
         Rentals rentalRecord = rentalsRepository.findById(id)
                 .orElseThrow(() -> new NotFoundException("Rental Record with id: " + id + " is not found."));
 
-        if(rentalsDTO.rentStart()!=null){
+        if (rentalsDTO.rentStart() != null) {
             rentalRecord.setRentStart(rentalsDTO.rentStart());
         }
-        if(rentalsDTO.rentEnd()!=null){
+        if (rentalsDTO.rentEnd() != null) {
             rentalRecord.setRentEnd(rentalsDTO.rentEnd());
         }
 
@@ -108,7 +108,7 @@ public class RentalsServiceImplementation implements RentalsService {
 
     @Override
     public String deleteRentals(Long id) {
-        Rentals rentalRecord = rentalsRepository.findById(id).orElseThrow(()-> new NotFoundException("Rental Record with id: " + id + " is not found."));
+        Rentals rentalRecord = rentalsRepository.findById(id).orElseThrow(() -> new NotFoundException("Rental Record with id: " + id + " is not found."));
         rentalsRepository.delete(rentalRecord);
 
         return "Rental record with Id: " + id + " is deleted successfully.";

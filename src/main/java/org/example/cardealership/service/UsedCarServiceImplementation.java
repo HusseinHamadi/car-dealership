@@ -16,14 +16,14 @@ import java.util.Objects;
 import java.util.Optional;
 
 @Service
-public class UsedCarServiceImplementation implements UsedCarService{
+public class UsedCarServiceImplementation implements UsedCarService {
 
 
     UsedCarRepository usedCarRepository;
     UsedCarMapper usedCarMapper;
 
-    public UsedCarServiceImplementation(UsedCarRepository usedCarRepository, UsedCarMapper usedCarMapper){
-        this.usedCarRepository= usedCarRepository;
+    public UsedCarServiceImplementation(UsedCarRepository usedCarRepository, UsedCarMapper usedCarMapper) {
+        this.usedCarRepository = usedCarRepository;
         this.usedCarMapper = usedCarMapper;
     }
 
@@ -53,28 +53,28 @@ public class UsedCarServiceImplementation implements UsedCarService{
     @Override
     public UsedCarResponseDTO updateUsedCar(UsedCarUpdateDTO usedCarDTO, Long id) {
         Optional<UsedCar> usedCarOptional = usedCarRepository.findById(id);
-        if(usedCarOptional.isEmpty()){
+        if (usedCarOptional.isEmpty()) {
             throw new NotFoundException("Used Car with Id: " + id + " is not found.");
         }
 
         UsedCar usedCar = usedCarOptional.get();
 
-        if(StringFunctions.notNullAndNotEmpty(usedCarDTO.brand())){
+        if (StringFunctions.notNullAndNotEmpty(usedCarDTO.brand())) {
             usedCar.setBrand(usedCarDTO.brand());
         }
-        if(StringFunctions.notNullAndNotEmpty(usedCarDTO.model())){
+        if (StringFunctions.notNullAndNotEmpty(usedCarDTO.model())) {
             usedCar.setModel(usedCarDTO.model());
         }
-        if(usedCarDTO.year() != null){
+        if (usedCarDTO.year() != null) {
             usedCar.setYear(usedCarDTO.year());
         }
-        if(Objects.nonNull(usedCarDTO.status())){
+        if (Objects.nonNull(usedCarDTO.status())) {
             usedCar.setStatus(usedCarDTO.status());
         }
-        if(usedCarDTO.basePrice() != null){
+        if (usedCarDTO.basePrice() != null) {
             usedCar.setBasePrice(usedCarDTO.basePrice());
         }
-        if(usedCarDTO.mileage() != null){
+        if (usedCarDTO.mileage() != null) {
             usedCar.setMileage(usedCarDTO.mileage());
         }
 
@@ -85,7 +85,7 @@ public class UsedCarServiceImplementation implements UsedCarService{
 
     @Override
     public String deleteUsedCar(Long id) {
-        UsedCar usedCar = usedCarRepository.findById(id).orElseThrow(()-> new NotFoundException("Rental Car with Id: " + id + " is not found."));
+        UsedCar usedCar = usedCarRepository.findById(id).orElseThrow(() -> new NotFoundException("Rental Car with Id: " + id + " is not found."));
 
         usedCarRepository.delete(usedCar);
 

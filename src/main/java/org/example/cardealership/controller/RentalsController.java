@@ -21,13 +21,13 @@ public class RentalsController {
 
     RentalsService rentalsService;
 
-    public RentalsController(RentalsService rentalsService){
+    public RentalsController(RentalsService rentalsService) {
 
-        this.rentalsService=rentalsService;
+        this.rentalsService = rentalsService;
     }
 
     @GetMapping
-    public ResponseEntity<List<RentalsResponseDTO>> getAllRentals(){
+    public ResponseEntity<List<RentalsResponseDTO>> getAllRentals() {
         logger.info("Getting all rental records: Rentals Controller");
         List<RentalsResponseDTO> rentalsList = rentalsService.getAllRentals();
         return ResponseEntity
@@ -36,7 +36,7 @@ public class RentalsController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<RentalsResponseDTO> getRentalsById(@PathVariable Long id){
+    public ResponseEntity<RentalsResponseDTO> getRentalsById(@PathVariable Long id) {
         RentalsResponseDTO rentals = rentalsService.getRentalsById(id);
         return ResponseEntity
                 .status(HttpStatus.OK)
@@ -44,7 +44,7 @@ public class RentalsController {
     }
 
     @PostMapping
-    public ResponseEntity<RentalsResponseDTO> addRentals(@Valid @RequestBody RentalsCreateDTO rentalsDTO){
+    public ResponseEntity<RentalsResponseDTO> addRentals(@Valid @RequestBody RentalsCreateDTO rentalsDTO) {
         RentalsResponseDTO rentals = rentalsService.addRentals(rentalsDTO);
         return ResponseEntity
                 .status(HttpStatus.OK)
@@ -52,14 +52,15 @@ public class RentalsController {
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<RentalsResponseDTO> updateRentals(@RequestBody RentalsUpdateDTO rentalsDTO, @PathVariable Long id){
+    public ResponseEntity<RentalsResponseDTO> updateRentals(@RequestBody RentalsUpdateDTO rentalsDTO, @PathVariable Long id) {
         RentalsResponseDTO rentals = rentalsService.updateRentals(rentalsDTO, id);
         return ResponseEntity
                 .status(HttpStatus.OK)
                 .body(rentals);
     }
+
     @DeleteMapping("/{id}")
-    public ResponseEntity<String> deleteRentals(@PathVariable Long id){
+    public ResponseEntity<String> deleteRentals(@PathVariable Long id) {
         String message = rentalsService.deleteRentals(id);
         return ResponseEntity
                 .status(HttpStatus.OK)

@@ -17,12 +17,12 @@ import java.util.List;
 public class UserController {
     UserService userService;
 
-    public UserController(UserService userService){
-        this.userService=userService;
+    public UserController(UserService userService) {
+        this.userService = userService;
     }
 
     @GetMapping
-    public ResponseEntity<List<UserResponseDTO>> getAllUsers(){
+    public ResponseEntity<List<UserResponseDTO>> getAllUsers() {
         List<UserResponseDTO> users = userService.getAllUsers();
         return ResponseEntity
                 .status(HttpStatus.OK)
@@ -30,7 +30,7 @@ public class UserController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<UserResponseDTO> getUserById(@PathVariable Long id){
+    public ResponseEntity<UserResponseDTO> getUserById(@PathVariable Long id) {
         UserResponseDTO user = userService.getUserById(id);
         return ResponseEntity
                 .status(HttpStatus.OK)
@@ -38,7 +38,7 @@ public class UserController {
     }
 
     @PostMapping
-    public ResponseEntity<UserResponseDTO> addUser(@Valid @RequestBody UserCreateDTO user){
+    public ResponseEntity<UserResponseDTO> addUser(@Valid @RequestBody UserCreateDTO user) {
         UserResponseDTO createdUser = userService.addUser(user);
         return ResponseEntity
                 .status(HttpStatus.OK)
@@ -46,7 +46,7 @@ public class UserController {
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<UserResponseDTO> updateUser(@RequestBody UserUpdateDTO user, @PathVariable Long id){
+    public ResponseEntity<UserResponseDTO> updateUser(@RequestBody UserUpdateDTO user, @PathVariable Long id) {
         UserResponseDTO updatedUser = userService.updateUser(user, id);
         return ResponseEntity
                 .status(HttpStatus.OK)
@@ -54,7 +54,7 @@ public class UserController {
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<String> deleteUser(@PathVariable Long id){
+    public ResponseEntity<String> deleteUser(@PathVariable Long id) {
         String message = userService.deleteUser(id);
         return ResponseEntity
                 .status(HttpStatus.OK)

@@ -36,7 +36,6 @@ public class Car {
     private Status status;
 
 
-
     @CreatedDate
     @Column(nullable = false, updatable = false)
     private LocalDateTime createdAt;

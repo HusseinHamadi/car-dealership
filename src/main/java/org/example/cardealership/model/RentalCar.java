@@ -18,7 +18,7 @@ import java.math.BigDecimal;
 @AllArgsConstructor
 @SuperBuilder
 @PrimaryKeyJoinColumn(name = "car_id")
-@Table(name="rental_cars")
+@Table(name = "rental_cars")
 public class RentalCar extends Car {
 
     private BigDecimal dailyRate;

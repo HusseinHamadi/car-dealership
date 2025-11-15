@@ -16,13 +16,13 @@ import java.util.Objects;
 import java.util.Optional;
 
 @Service
-public class RentalCarServiceImplementation implements RentalCarService{
+public class RentalCarServiceImplementation implements RentalCarService {
 
     RentalCarRepository rentalCarRepository;
     RentalCarMapper rentalCarMapper;
 
-    public RentalCarServiceImplementation(RentalCarRepository rentalCarRepository, RentalCarMapper rentalCarMapper){
-        this.rentalCarRepository= rentalCarRepository;
+    public RentalCarServiceImplementation(RentalCarRepository rentalCarRepository, RentalCarMapper rentalCarMapper) {
+        this.rentalCarRepository = rentalCarRepository;
         this.rentalCarMapper = rentalCarMapper;
     }
 
@@ -52,25 +52,25 @@ public class RentalCarServiceImplementation implements RentalCarService{
     @Override
     public RentalCarResponseDTO updateRentalCar(RentalCarUpdateDTO rentalCarDTO, Long id) {
         Optional<RentalCar> rentalCarOptional = rentalCarRepository.findById(id);
-        if(rentalCarOptional.isEmpty()){
+        if (rentalCarOptional.isEmpty()) {
             throw new NotFoundException("Rental Car with Id: " + id + " is not found.");
         }
 
         RentalCar rentalCar = rentalCarOptional.get();
 
-        if(StringFunctions.notNullAndNotEmpty(rentalCarDTO.brand())){
+        if (StringFunctions.notNullAndNotEmpty(rentalCarDTO.brand())) {
             rentalCar.setBrand(rentalCarDTO.brand());
         }
-        if(StringFunctions.notNullAndNotEmpty(rentalCarDTO.model())){
+        if (StringFunctions.notNullAndNotEmpty(rentalCarDTO.model())) {
             rentalCar.setModel(rentalCarDTO.model());
         }
-        if(rentalCarDTO.year() != null){
+        if (rentalCarDTO.year() != null) {
             rentalCar.setYear(rentalCarDTO.year());
         }
-        if(Objects.nonNull(rentalCarDTO.status())){
+        if (Objects.nonNull(rentalCarDTO.status())) {
             rentalCar.setStatus(rentalCarDTO.status());
         }
-        if(rentalCarDTO.dailyRate() != null){
+        if (rentalCarDTO.dailyRate() != null) {
             rentalCar.setDailyRate(rentalCarDTO.dailyRate());
         }
 
@@ -81,7 +81,7 @@ public class RentalCarServiceImplementation implements RentalCarService{
 
     @Override
     public String deleteRentalCar(Long id) {
-        RentalCar rentalCar = rentalCarRepository.findById(id).orElseThrow(()-> new NotFoundException("Rental Car with Id: " + id + " is not found."));
+        RentalCar rentalCar = rentalCarRepository.findById(id).orElseThrow(() -> new NotFoundException("Rental Car with Id: " + id + " is not found."));
 
         rentalCarRepository.delete(rentalCar);
 

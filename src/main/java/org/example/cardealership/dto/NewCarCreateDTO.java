@@ -25,4 +25,5 @@ public record NewCarCreateDTO(
 
         @Positive(message = "Warranty period must be positive if specified.")
         Integer warranty
-) { }
+) {
+}

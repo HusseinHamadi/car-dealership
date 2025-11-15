@@ -16,14 +16,14 @@ import java.util.Objects;
 import java.util.Optional;
 
 @Service
-public class NewCarServiceImplementation implements NewCarService{
+public class NewCarServiceImplementation implements NewCarService {
 
 
     NewCarRepository newCarRepository;
     NewCarMapper newCarMapper;
 
-    public NewCarServiceImplementation(NewCarRepository newCarRepository, NewCarMapper newCarMapper){
-        this.newCarRepository= newCarRepository;
+    public NewCarServiceImplementation(NewCarRepository newCarRepository, NewCarMapper newCarMapper) {
+        this.newCarRepository = newCarRepository;
         this.newCarMapper = newCarMapper;
     }
 
@@ -53,28 +53,28 @@ public class NewCarServiceImplementation implements NewCarService{
     @Override
     public NewCarResponseDTO updateNewCar(NewCarUpdateDTO newCarDTO, Long id) {
         Optional<NewCar> newCarOptional = newCarRepository.findById(id);
-        if(newCarOptional.isEmpty()){
+        if (newCarOptional.isEmpty()) {
             throw new NotFoundException("New Car with Id: " + id + " is not found.");
         }
 
         NewCar newCar = newCarOptional.get();
 
-        if(StringFunctions.notNullAndNotEmpty(newCarDTO.brand())){
+        if (StringFunctions.notNullAndNotEmpty(newCarDTO.brand())) {
             newCar.setBrand(newCarDTO.brand());
         }
-        if(StringFunctions.notNullAndNotEmpty(newCarDTO.model())){
+        if (StringFunctions.notNullAndNotEmpty(newCarDTO.model())) {
             newCar.setModel(newCarDTO.model());
         }
-        if(newCarDTO.year() != null){
+        if (newCarDTO.year() != null) {
             newCar.setYear(newCarDTO.year());
         }
-        if(Objects.nonNull(newCarDTO.status())){
+        if (Objects.nonNull(newCarDTO.status())) {
             newCar.setStatus(newCarDTO.status());
         }
-        if(newCarDTO.basePrice() != null){
+        if (newCarDTO.basePrice() != null) {
             newCar.setBasePrice(newCarDTO.basePrice());
         }
-        if(newCarDTO.warranty() != null){
+        if (newCarDTO.warranty() != null) {
             newCar.setWarranty(newCarDTO.warranty());
         }
 
@@ -85,7 +85,7 @@ public class NewCarServiceImplementation implements NewCarService{
 
     @Override
     public String deleteNewCar(Long id) {
-        NewCar newCar = newCarRepository.findById(id).orElseThrow(()-> new NotFoundException("Rental Car with Id: " + id + " is not found."));
+        NewCar newCar = newCarRepository.findById(id).orElseThrow(() -> new NotFoundException("Rental Car with Id: " + id + " is not found."));
 
         newCarRepository.delete(newCar);
 

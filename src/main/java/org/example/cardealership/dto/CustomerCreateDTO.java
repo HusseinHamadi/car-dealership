@@ -18,5 +18,6 @@ public record CustomerCreateDTO(
 
         @NotBlank(message = "Address is required.")
         String address
-) { }
+) {
+}
 

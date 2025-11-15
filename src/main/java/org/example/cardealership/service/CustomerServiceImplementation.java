@@ -17,7 +17,7 @@ import java.util.Optional;
 import java.util.logging.Logger;
 
 @Service
-public class CustomerServiceImplementation implements CustomerService{
+public class CustomerServiceImplementation implements CustomerService {
 
     private final CustomerRepository customerRepository;
 
@@ -28,9 +28,9 @@ public class CustomerServiceImplementation implements CustomerService{
     private static final Logger logger = Logger.getLogger(CustomerServiceImplementation.class.getName());
 
 
-    public CustomerServiceImplementation(CustomerRepository customerRepository, CustomerMapper customerMapper){
-        this.customerRepository=customerRepository;
-        this.customerMapper=customerMapper;
+    public CustomerServiceImplementation(CustomerRepository customerRepository, CustomerMapper customerMapper) {
+        this.customerRepository = customerRepository;
+        this.customerMapper = customerMapper;
     }
 
 
@@ -47,15 +47,15 @@ public class CustomerServiceImplementation implements CustomerService{
     @Override
     public CustomerResponseDTO getCustomerById(Long id) {
         return customerRepository.findById(id)
-                .map(customer->customerMapper.customerToCustomerResponseDto(customer))
-                .orElseThrow(() -> new NotFoundException("Customer with id: "+id+" does not exist"));
+                .map(customer -> customerMapper.customerToCustomerResponseDto(customer))
+                .orElseThrow(() -> new NotFoundException("Customer with id: " + id + " does not exist"));
     }
 
     @Override
     public CustomerResponseDTO addCustomer(CustomerCreateDTO customerDTO) {
         Optional<Customer> presentCustomer = customerRepository.findCustomerByEmail(customerDTO.email());
-        if(presentCustomer.isPresent()){
-            throw new ConflictException("Email \""+ presentCustomer.get().getEmail() +"\" already exists");
+        if (presentCustomer.isPresent()) {
+            throw new ConflictException("Email \"" + presentCustomer.get().getEmail() + "\" already exists");
         }
         Customer customer = customerMapper.customerCreateDtoToCustomer(customerDTO);
         Customer savedCustomer = customerRepository.save(customer);
@@ -65,38 +65,38 @@ public class CustomerServiceImplementation implements CustomerService{
     @Override
     public CustomerResponseDTO updateCustomer(CustomerUpdateDTO customerDTO, Long id) {
         Optional<Customer> foundCustomer = customerRepository.findById(id);
-        if(foundCustomer.isEmpty()){
-            throw new NotFoundException("Customer with id: "+id+" does not exist");
+        if (foundCustomer.isEmpty()) {
+            throw new NotFoundException("Customer with id: " + id + " does not exist");
         }
 
         Customer updateCustomer = foundCustomer.get();
 
-        if(StringFunctions.notNullAndNotEmpty(customerDTO.firstName())){
+        if (StringFunctions.notNullAndNotEmpty(customerDTO.firstName())) {
             updateCustomer.setFirstName(customerDTO.firstName());
         }
-        if(StringFunctions.notNullAndNotEmpty(customerDTO.lastName())){
+        if (StringFunctions.notNullAndNotEmpty(customerDTO.lastName())) {
             updateCustomer.setLastName(customerDTO.lastName());
         }
-        if(StringFunctions.notNullAndNotEmpty(customerDTO.phoneNumber())){
+        if (StringFunctions.notNullAndNotEmpty(customerDTO.phoneNumber())) {
             updateCustomer.setPhoneNumber(customerDTO.phoneNumber());
         }
-        if(StringFunctions.notNullAndNotEmpty(customerDTO.email())){
+        if (StringFunctions.notNullAndNotEmpty(customerDTO.email())) {
             updateCustomer.setEmail(customerDTO.email());
         }
-        if(StringFunctions.notNullAndNotEmpty(customerDTO.address())){
+        if (StringFunctions.notNullAndNotEmpty(customerDTO.address())) {
             updateCustomer.setAddress(customerDTO.address());
         }
-        Customer savedCustomer=customerRepository.save(updateCustomer);
+        Customer savedCustomer = customerRepository.save(updateCustomer);
         return customerMapper.customerToCustomerResponseDto(savedCustomer);
     }
 
     @Override
     public String deleteCustomer(Long id) {
         Optional<Customer> customer = customerRepository.findById(id);
-        if(customer.isEmpty()){
-            throw new NotFoundException("Customer with id: "+id+" is not found");
+        if (customer.isEmpty()) {
+            throw new NotFoundException("Customer with id: " + id + " is not found");
         }
         customerRepository.delete(customer.get());
-        return "Customer with id: "+id+" is deleted successfully";
+        return "Customer with id: " + id + " is deleted successfully";
     }
 }

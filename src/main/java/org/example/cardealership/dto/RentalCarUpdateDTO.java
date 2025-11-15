@@ -4,11 +4,11 @@ import org.example.cardealership.enums.Status;
 
 import java.math.BigDecimal;
 
-public record RentalCarUpdateDTO( String brand,
-                                  String model,
-                                  Integer year,
-                                  Status status,
-                                  BigDecimal dailyRate
+public record RentalCarUpdateDTO(String brand,
+                                 String model,
+                                 Integer year,
+                                 Status status,
+                                 BigDecimal dailyRate
 
 ) {
 }

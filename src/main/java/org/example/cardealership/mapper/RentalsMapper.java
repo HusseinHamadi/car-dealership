@@ -15,7 +15,7 @@ public interface RentalsMapper {
     Rentals rentalsUpdateDtoToRentals(RentalsUpdateDTO rentalsUpdateDTO);
 
 
-//    @Mappings({
+    //    @Mappings({
 //            @Mapping(target = "brand", source = "rentalCar.brand"),
 //            @Mapping(target = "model", source = "rentalCar.model"),
 //            @Mapping(target = "year", source = "rentalCar.year"),

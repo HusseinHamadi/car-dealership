@@ -20,11 +20,8 @@ import java.math.BigDecimal;
 @SuperBuilder
 @PrimaryKeyJoinColumn(name = "car_id")
 @Table(name = "sale_cars")
-public class SaleCar extends Car{
+public class SaleCar extends Car {
 
     private BigDecimal basePrice;
-
-
-
 
 }

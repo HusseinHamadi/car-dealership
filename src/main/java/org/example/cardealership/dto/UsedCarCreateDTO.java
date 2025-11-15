@@ -28,4 +28,5 @@ public record UsedCarCreateDTO(
 
         @PositiveOrZero(message = "Mileage must be zero or positive.")
         Long mileage
-) { }
+) {
+}

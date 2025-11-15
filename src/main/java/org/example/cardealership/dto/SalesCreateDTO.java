@@ -18,5 +18,7 @@ public record SalesCreateDTO(
 
         @NotNull(message = "Sale car ID is required.")
         Long saleCarId
-) { }
+) {
+
+}
 

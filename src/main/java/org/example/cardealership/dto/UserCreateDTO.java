@@ -29,5 +29,6 @@ public record UserCreateDTO(
 
         @NotNull(message = "Role is required.")
         Role role
-) { }
+) {
+}
 

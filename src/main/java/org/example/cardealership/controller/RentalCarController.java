@@ -18,12 +18,12 @@ public class RentalCarController {
 
     RentalCarService rentalCarService;
 
-    public RentalCarController(RentalCarService rentalCarService){
+    public RentalCarController(RentalCarService rentalCarService) {
         this.rentalCarService = rentalCarService;
     }
 
     @GetMapping
-    public ResponseEntity<List<RentalCarResponseDTO>> getAllRentalCars(){
+    public ResponseEntity<List<RentalCarResponseDTO>> getAllRentalCars() {
         List<RentalCarResponseDTO> rentalCarList = rentalCarService.getAllRentalCars();
         return ResponseEntity
                 .status(HttpStatus.OK)
@@ -31,7 +31,7 @@ public class RentalCarController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<RentalCarResponseDTO> getRentalCarById(@PathVariable Long id){
+    public ResponseEntity<RentalCarResponseDTO> getRentalCarById(@PathVariable Long id) {
         RentalCarResponseDTO rentalCar = rentalCarService.getRentalCarById(id);
         return ResponseEntity
                 .status(HttpStatus.OK)
@@ -39,7 +39,7 @@ public class RentalCarController {
     }
 
     @PostMapping
-    public ResponseEntity<RentalCarResponseDTO> addRentalCar(@Valid @RequestBody RentalCarCreateDTO rentalCarDTO){
+    public ResponseEntity<RentalCarResponseDTO> addRentalCar(@Valid @RequestBody RentalCarCreateDTO rentalCarDTO) {
         RentalCarResponseDTO rentalCar = rentalCarService.addRentalCar(rentalCarDTO);
         return ResponseEntity
                 .status(HttpStatus.OK)
@@ -47,14 +47,15 @@ public class RentalCarController {
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<RentalCarResponseDTO> updateRentalCar(@RequestBody RentalCarUpdateDTO rentalCarDTO, @PathVariable Long id){
+    public ResponseEntity<RentalCarResponseDTO> updateRentalCar(@RequestBody RentalCarUpdateDTO rentalCarDTO, @PathVariable Long id) {
         RentalCarResponseDTO rentalCar = rentalCarService.updateRentalCar(rentalCarDTO, id);
         return ResponseEntity
                 .status(HttpStatus.OK)
                 .body(rentalCar);
     }
+
     @DeleteMapping("/{id}")
-    public ResponseEntity<String> deleteRentalCar(@PathVariable Long id){
+    public ResponseEntity<String> deleteRentalCar(@PathVariable Long id) {
         String message = rentalCarService.deleteRentalCar(id);
         return ResponseEntity
                 .status(HttpStatus.OK)

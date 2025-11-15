@@ -34,12 +34,15 @@ public class Sales {
     private LocalDateTime updatedAt;
 
     @ManyToOne(cascade = CascadeType.PERSIST)
+    @JoinColumn(name = "user_id")
     private User user;
 
     @ManyToOne(cascade = CascadeType.PERSIST)
+    @JoinColumn(name = "customer_id")
     private Customer customer;
 
     @ManyToOne(cascade = CascadeType.PERSIST)
+    @JoinColumn(name = "sale_car_id")
     private SaleCar saleCar;
 
 }
