@@ -1,0 +1,36 @@
+.container {
+  position: relative;
+  width: 100%;
+  height: 500px;
+}
+
+.cover {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  position: relative;
+}
+.cover img {
+  height: 550px;
+  width: 100%;
+}
+.cover::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  height: 500px;
+  width: 100%; /* Changed from 100px to cover full width */
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.7) 10%,
+    rgba(0, 0, 0, 0) 60%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+
+.header {
+  position: absolute;
+  width: 100%;
+  z-index: 2;
+}

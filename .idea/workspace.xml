@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="7988305d-ef64-485d-bc23-5849d457f2e5" name="Changes" comment="remove OpenApiConfig">
+      <change beforePath="$PROJECT_DIR$/.gitattributes" beforeDir="false" afterPath="$PROJECT_DIR$/backend/.gitattributes" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/backend/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/backend/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvnw" beforeDir="false" afterPath="$PROJECT_DIR$/backend/mvnw" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvnw.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/backend/mvnw.cmd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/cardealership/CarDealershipApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/org/example/cardealership/CarDealershipApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/cardealership/advice/ExceptionControllerAdvice.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/org/example/cardealership/advice/ExceptionControllerAdvice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/cardealership/controller/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/org/example/cardealership/controller/CustomerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/cardealership/controller/NewCarController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/org/example/cardealership/controller/NewCarController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/cardealership/controller/RentalCarController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/org/example/cardealership/controller/RentalCarController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/cardealership/controller/RentalsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/org/example/cardealership/controller/RentalsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/cardealership/controller/SalesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/org/example/cardealership/controller/SalesController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/cardealership/controller/UsedCarController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/org/example/cardealership/controller/UsedCarController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/cardealership/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/org/example/cardealership/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/cardealership/dto/CustomerCreateDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/org/example/cardealership/dto/CustomerCreateDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/cardealership/dto/CustomerResponseDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/org/example/cardealership/dto/CustomerResponseDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/cardealership/dto/CustomerUpdateDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/org/example/cardealership/dto/CustomerUpdateDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/cardealership/dto/NewCarCreateDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/org/example/cardealership/dto/NewCarCreateDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/cardealership/dto/NewCarResponseDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/org/example/cardealership/dto/NewCarResponseDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/cardealership/dto/NewCarUpdateDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/org/example/cardealership/dto/NewCarUpdateDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/cardealership/dto/RentalCarCreateDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/org/example/cardealership/dto/RentalCarCreateDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/cardealership/dto/RentalCarResponseDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/org/example/cardealership/dto/RentalCarResponseDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/cardealership/dto/RentalCarUpdateDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/org/example/cardealership/dto/RentalCarUpdateDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/cardealership/dto/RentalsCreateDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/org/example/cardealership/dto/RentalsCreateDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/cardealership/dto/RentalsResponseDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/org/example/cardealership/dto/RentalsResponseDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/cardealership/dto/RentalsUpdateDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/org/example/cardealership/dto/RentalsUpdateDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/cardealership/dto/SaleCarResponseDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/org/example/cardealership/dto/SaleCarResponseDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/cardealership/dto/SalesCreateDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/org/example/cardealership/dto/SalesCreateDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/cardealership/dto/SalesResponseDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/org/example/cardealership/dto/SalesResponseDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/cardealership/dto/SalesUpdateDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/org/example/cardealership/dto/SalesUpdateDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/cardealership/dto/UsedCarCreateDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/org/example/cardealership/dto/UsedCarCreateDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/cardealership/dto/UsedCarResponseDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/org/example/cardealership/dto/UsedCarResponseDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/cardealership/dto/UsedCarUpdateDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/org/example/cardealership/dto/UsedCarUpdateDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/cardealership/dto/UserCreateDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/org/example/cardealership/dto/UserCreateDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/cardealership/dto/UserResponseDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/org/example/cardealership/dto/UserResponseDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/cardealership/dto/UserUpdateDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/org/example/cardealership/dto/UserUpdateDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/cardealership/enums/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/org/example/cardealership/enums/Role.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/cardealership/enums/Status.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/org/example/cardealership/enums/Status.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/cardealership/exception/ConflictException.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/org/example/cardealership/exception/ConflictException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/cardealership/exception/ErrorResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/org/example/cardealership/exception/ErrorResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/cardealership/exception/NotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/org/example/cardealership/exception/NotFoundException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/cardealership/helpers/StringFunctions.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/org/example/cardealership/helpers/StringFunctions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/cardealership/mapper/CustomerMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/org/example/cardealership/mapper/CustomerMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/cardealership/mapper/NewCarMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/org/example/cardealership/mapper/NewCarMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/cardealership/mapper/RentalCarMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/org/example/cardealership/mapper/RentalCarMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/cardealership/mapper/RentalsMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/org/example/cardealership/mapper/RentalsMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/cardealership/mapper/SaleCarMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/org/example/cardealership/mapper/SaleCarMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/cardealership/mapper/SalesMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/org/example/cardealership/mapper/SalesMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/cardealership/mapper/UsedCarMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/org/example/cardealership/mapper/UsedCarMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/cardealership/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/org/example/cardealership/mapper/UserMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/cardealership/model/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/org/example/cardealership/model/Car.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/cardealership/model/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/org/example/cardealership/model/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/cardealership/model/NewCar.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/org/example/cardealership/model/NewCar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/cardealership/model/RentalCar.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/org/example/cardealership/model/RentalCar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/cardealership/model/Rentals.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/org/example/cardealership/model/Rentals.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/cardealership/model/SaleCar.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/org/example/cardealership/model/SaleCar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/cardealership/model/Sales.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/org/example/cardealership/model/Sales.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/cardealership/model/UsedCar.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/org/example/cardealership/model/UsedCar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/cardealership/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/org/example/cardealership/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/cardealership/repository/CustomerRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/org/example/cardealership/repository/CustomerRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/cardealership/repository/NewCarRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/org/example/cardealership/repository/NewCarRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/cardealership/repository/RentalCarRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/org/example/cardealership/repository/RentalCarRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/cardealership/repository/RentalsRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/org/example/cardealership/repository/RentalsRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/cardealership/repository/SalesRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/org/example/cardealership/repository/SalesRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/cardealership/repository/UsedCarRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/org/example/cardealership/repository/UsedCarRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/cardealership/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/org/example/cardealership/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/cardealership/service/CustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/org/example/cardealership/service/CustomerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/cardealership/service/CustomerServiceImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/org/example/cardealership/service/CustomerServiceImplementation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/cardealership/service/NewCarService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/org/example/cardealership/service/NewCarService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/cardealership/service/NewCarServiceImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/org/example/cardealership/service/NewCarServiceImplementation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/cardealership/service/RentalCarService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/org/example/cardealership/service/RentalCarService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/cardealership/service/RentalCarServiceImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/org/example/cardealership/service/RentalCarServiceImplementation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/cardealership/service/RentalsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/org/example/cardealership/service/RentalsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/cardealership/service/RentalsServiceImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/org/example/cardealership/service/RentalsServiceImplementation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/cardealership/service/SalesService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/org/example/cardealership/service/SalesService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/cardealership/service/SalesServiceImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/org/example/cardealership/service/SalesServiceImplementation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/cardealership/service/UsedCarService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/org/example/cardealership/service/UsedCarService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/cardealership/service/UsedCarServiceImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/org/example/cardealership/service/UsedCarServiceImplementation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/cardealership/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/org/example/cardealership/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/cardealership/service/UserServiceImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/org/example/cardealership/service/UserServiceImplementation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/cardealership/CarDealershipApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/test/java/org/example/cardealership/CarDealershipApplicationTests.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager">
+    <option name="groupingKeys">
+      <option value="directory" />
+      <option value="module" />
+    </option>
+  </component>
+  <component name="CompilerWorkspaceConfiguration">
+    <option name="MAKE_PROJECT_ON_SAVE" value="true" />
+  </component>
+  <component name="CopilotPersistence">
+    <persistenceIdMap>
+      <entry key="_C:/Users/user/Desktop/Development/01 Spring Boot/01 Projects/car-dealership" value="33n2i6OJ2IBNXBPlHHLyZYE9f7T" />
+      <entry key="_C:/Users/user/Desktop/Development/01 Spring Boot/01 Projects/car-dealership/backend" value="39fsYDCDaCugeSVu9nJri4yYbyb" />
+    </persistenceIdMap>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Exception" />
+        <option value="Record" />
+        <option value="Class" />
+        <option value="Interface" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="5e7ed8f379a1348c32f7f8680baddbc1eee9968c" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;HusseinHamadi&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/HusseinHamadi/car-dealership.git&quot;,
+    &quot;accountId&quot;: &quot;f09f7a82-7dfd-433e-b048-c06e08c03b1f&quot;
+  }
+}</component>
+  <component name="JpbToolWindowState">
+    <option name="isToolWindowVisible" value="false" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="33n2i6OJ2IBNXBPlHHLyZYE9f7T" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Maven.car-dealership [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.car-dealership [compile].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.car-dealership [install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.car-dealership [test].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.car-dealership [validate].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.car-dealership [verify].executor&quot;: &quot;Run&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;Spring Boot.CarDealershipApplication.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/user/Desktop/Development/01 Spring Boot/01 Projects/car-dealership/src/main/java/org/example/cardealership&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Problems&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.17&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.36578947&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.annotationProcessors&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
+    ]
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\user\Desktop\Development\01 Spring Boot\01 Projects\car-dealership\src\main\java\org\example\cardealership" />
+      <recent name="C:\Users\user\Desktop\Development\01 Spring Boot\01 Projects\car-dealership\src\main\java\org\example\cardealership\controller" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\user\Desktop\Development\01 Spring Boot\01 Projects\car-dealership\backend" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.example.cardealership.mapper" />
+      <recent name="org.example.cardealership.dto" />
+      <recent name="org.example.cardealership.service" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="CarDealershipApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="car-dealership" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="org.example.cardealership.CarDealershipApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-b114ca120d71-intellij.indexing.shared.core-IU-242.20224.387" />
+        <option value="bundled-js-predefined-d6986cc7102b-410509235cf1-JavaScript-IU-242.20224.387" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7988305d-ef64-485d-bc23-5849d457f2e5" name="Changes" comment="" />
+      <created>1759938643951</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1759938643951</updated>
+      <workItem from="1759938645292" duration="675000" />
+      <workItem from="1759998538910" duration="4427000" />
+      <workItem from="1760081315570" duration="1925000" />
+      <workItem from="1760099248526" duration="2483000" />
+      <workItem from="1760211247875" duration="4211000" />
+      <workItem from="1760333093601" duration="6805000" />
+      <workItem from="1760427947005" duration="2723000" />
+      <workItem from="1760512080510" duration="2583000" />
+      <workItem from="1760595359482" duration="6802000" />
+      <workItem from="1760811648612" duration="3428000" />
+      <workItem from="1761043999532" duration="6976000" />
+      <workItem from="1761108735781" duration="4695000" />
+      <workItem from="1761140007227" duration="8233000" />
+      <workItem from="1761198347393" duration="10900000" />
+      <workItem from="1761421692373" duration="2532000" />
+      <workItem from="1761466934285" duration="2965000" />
+      <workItem from="1761550944525" duration="13375000" />
+      <workItem from="1761591940536" duration="4910000" />
+      <workItem from="1761647118386" duration="7587000" />
+      <workItem from="1761715986196" duration="7235000" />
+      <workItem from="1761736193632" duration="14718000" />
+      <workItem from="1761814983259" duration="1384000" />
+      <workItem from="1761920309075" duration="8981000" />
+      <workItem from="1761937136195" duration="9646000" />
+      <workItem from="1761984242167" duration="16300000" />
+      <workItem from="1762006822938" duration="5972000" />
+      <workItem from="1762077667089" duration="6816000" />
+      <workItem from="1762148846579" duration="1608000" />
+      <workItem from="1762235401386" duration="9446000" />
+      <workItem from="1762268365855" duration="6169000" />
+      <workItem from="1762807248907" duration="589000" />
+      <workItem from="1762858024421" duration="12056000" />
+      <workItem from="1762926771810" duration="5063000" />
+      <workItem from="1762959255293" duration="5428000" />
+      <workItem from="1763023033730" duration="1502000" />
+      <workItem from="1763110544039" duration="2048000" />
+      <workItem from="1763142974873" duration="14522000" />
+      <workItem from="1763157909184" duration="3730000" />
+      <workItem from="1763187875720" duration="16098000" />
+      <workItem from="1763540397943" duration="160000" />
+      <workItem from="1764007244072" duration="1412000" />
+      <workItem from="1764084614090" duration="2225000" />
+      <workItem from="1764183691042" duration="129000" />
+      <workItem from="1764840578221" duration="951000" />
+      <workItem from="1771017665132" duration="1392000" />
+      <workItem from="1771080044300" duration="5450000" />
+      <workItem from="1771098456562" duration="112000" />
+      <workItem from="1771192982210" duration="1838000" />
+      <workItem from="1771195041058" duration="2852000" />
+    </task>
+    <task id="LOCAL-00001" summary="add Rental car CRUD, add validation messages, add validation exception handling, change int to Integer">
+      <option name="closed" value="true" />
+      <created>1762269873498</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1762269873498</updated>
+    </task>
+    <task id="LOCAL-00002" summary="add CRUD for rentals, fix rentals model by adding EntityListeners, fix DTO to return rental car">
+      <option name="closed" value="true" />
+      <created>1762883766733</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1762883766733</updated>
+    </task>
+    <task id="LOCAL-00003" summary="add swagger">
+      <option name="closed" value="true" />
+      <created>1763207238160</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1763207238161</updated>
+    </task>
+    <task id="LOCAL-00004" summary="remove OpenApiConfig">
+      <option name="closed" value="true" />
+      <created>1763210631630</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1763210631630</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="add Rental car CRUD, add validation messages, add validation exception handling, change int to Integer" />
+    <MESSAGE value="add CRUD for rentals, fix rentals model by adding EntityListeners, fix DTO to return rental car" />
+    <MESSAGE value="add CRUD for Sales, add SaleCarResponseDTO interface for sale car mapper, create sale car mapper to map new and used cars, fix sales mapper" />
+    <MESSAGE value="add swagger" />
+    <MESSAGE value="remove OpenApiConfig" />
+    <option name="LAST_COMMIT_MESSAGE" value="remove OpenApiConfig" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+  <component name="github-copilot-workspace">
+    <instructionFileLocations>
+      <option value=".github/instructions" />
+    </instructionFileLocations>
+    <promptFileLocations>
+      <option value=".github/prompts" />
+    </promptFileLocations>
+  </component>
+</project>

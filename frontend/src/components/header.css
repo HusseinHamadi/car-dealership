@@ -1,0 +1,13 @@
+.navbar {
+  position: absolute;
+}
+
+.container {
+  position: relative;
+}
+
+.cover {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+}

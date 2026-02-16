@@ -1,6 +1,6 @@
 package org.example.cardealership.controller;
 
-
+import org.springframework.web.bind.annotation.CrossOrigin;
 import jakarta.validation.Valid;
 import org.example.cardealership.dto.NewCarCreateDTO;
 import org.example.cardealership.dto.NewCarResponseDTO;
@@ -14,6 +14,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/newcars")
+@CrossOrigin(origins = "http://localhost:5173")
 public class NewCarController {
 
     NewCarService newCarService;
